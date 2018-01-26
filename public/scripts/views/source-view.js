@@ -10,8 +10,8 @@ var app = app || {};
   const selectedList = [];
 
   preferenceView.init = () => {
-    $('#home-link, #logout-link').show();
     $('#signup-link, #login-link, #pref-link').hide();
+    $('#home-link, #logout-link, .save-button').show();
 
     app.Source.fetchAllSources().then(() => {
       app.Source.all.forEach((source) => {
@@ -29,10 +29,10 @@ var app = app || {};
           selectedList.push(checkedList[i].id);
         }
       }
-
       console.log('we selected the following news outlets: ' + selectedList);
       $('.name-list, .save-button').fadeOut(500);
       page('/home');
+      // renderArticles(app.Article.all.id === selectedList.id);
     });
   };
 

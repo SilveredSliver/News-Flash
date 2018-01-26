@@ -5,22 +5,22 @@ page('/*', (ctx, next) => {
   next();
 });
 
-page('/', () => { 
+page('/', () => {
   page('/home');
   $('.save-button').hide();
 });
 
-page('/home', () => { 
+page('/home', () => {
   app.newsListPage.init();
 });
 
 page('/login', () => {
-  event.preventDefault();
+  // event.preventDefault();
   app.loginView.init();
 });
 
 page('/signup', () => {
-  event.preventDefault();
+  // event.preventDefault();
   app.signUpView.init();
   $('#signUp').show();
   $('.feed-wrapper').hide();
@@ -28,7 +28,7 @@ page('/signup', () => {
 });
 
 page('/preferences', () => {
-  event.preventDefault();
+  // event.preventDefault();
   app.preferenceView.init();
   $('.feed-wrapper, #signUp').hide();
 });

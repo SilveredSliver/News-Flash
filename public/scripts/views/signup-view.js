@@ -16,7 +16,6 @@ var app = app || {};
     } else {
       loginList = JSON.parse(loginList);
     };
-
     // $('#signup-link').on('click', (event) => {
     //   event.preventDefault();
     //   $('#signUp').show();

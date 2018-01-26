@@ -4,12 +4,13 @@ var modal = document.getElementById('login-modal');
 var loginLink = document.getElementById("login-link");
 
 $(document).ready(function() {
-    $('#navbar-toggle').on('click', function() {
-        $("#panel").slideToggle();
-    });
+  $('#navbar-toggle').on('click', function() {
+    $("#panel").slideToggle();
+  });
 
-    // hide the Login modal
-    modal.style.display = "none";
+
+  // hide the Login modal
+  modal.style.display = "none";
 });
 
 //when user presses LOG OUT
@@ -27,11 +28,11 @@ loginLink.onclick = function () {
 
 // add the close functionality for each nav bar link when the user presses on any of them
 function addCloseNavBar () {
-    var navbarLinks = document.getElementsByClassName("navbar-item");
-    for (var i = 0; i < navbarLinks.length; i++) {
-        navbarLinks[i].addEventListener("click", function() {
-            $("#panel").stop().slideToggle();
-        }, false);
-    }
+  var navbarLinks = document.getElementsByClassName("navbar-item");
+  for (var i = 0; i < navbarLinks.length; i++) {
+    navbarLinks[i].addEventListener("click", function() {
+      $("#panel").stop().slideToggle();
+    }, false);
+  }
 }
 addCloseNavBar();

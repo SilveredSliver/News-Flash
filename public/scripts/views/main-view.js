@@ -59,12 +59,12 @@ var app = app || {};
 
   // testing
   $(window).scroll(function(){
-    if ($(window).scrollTop() == $(document).height()-$(window).height()){
-        app.Article.fetchAllArticles().then(() => {
-          renderArticles()
-        })
-    }
-});
+    if ($(window).scrollTop() == $(document).height() - $(window).height()){
+      // app.Article.fetchAllArticles().then(() => {
+      //   renderArticles();
+      // });
+    };
+  });
 
 
   module.newsListPage = newsListPage
