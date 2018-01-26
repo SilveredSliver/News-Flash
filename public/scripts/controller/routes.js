@@ -5,8 +5,14 @@ page('/*', (ctx, next) => {
   next();
 });
 
+<<<<<<< HEAD
 page('/', () => {
   page('/home');
+=======
+page('/', () => { 
+  // page.redirect('/home');
+  app.newsListPage.init();
+>>>>>>> eda43041fc5d4d4ad50155214f4ff920ee59c518
   $('.save-button').hide();
 });
 
