@@ -6,22 +6,21 @@ page('/*', (ctx, next) => {
 });
 
 page('/', () => { 
-  // page.redirect('/home');
-  app.newsListPage.init();
+  page.redirect('/home');
   $('.save-button').hide();
 });
 
 page('/home', () => { 
   app.newsListPage.init();
+  isUserLoggedIn();
 });
 
 page('/login', () => {
-  event.preventDefault();
   app.loginView.init();
+  isUserLoggedIn();
 });
 
 page('/signup', () => {
-  event.preventDefault();
   app.signUpView.init();
   $('#signUp').show();
   $('.feed-wrapper').hide();
@@ -29,8 +28,9 @@ page('/signup', () => {
 });
 
 page('/preferences', () => {
-  event.preventDefault();
+  isUserLoggedIn();
   app.preferenceView.init();
+  $('.save-button').show();
   $('.feed-wrapper, #signUp').hide();
 });
 
